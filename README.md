@@ -21,6 +21,8 @@ ACCESS_TOKEN_SECRET = <your access token secret (if in production mode)>
 DEV_ACCESS_TOKEN = <your development access token (if in development mode)>
 DEV_ACCESS_TOKEN_SECRET = <your development access token secret (if in development mode)>
 LEAGUE_ID = <ID of the Twitter account to monitor>
+
+# HOW OFTEN THE BOT CHECKS FOR UPDATES, RECOMMEND SETTING TO 1 MINUTE
 RESET_PERIOD_HOUR = <number of hours between reset periods>
 RESET_PERIOD_MINUTE = <number of minutes between reset periods>
 RESET_PERIOD_SECOND = <number of seconds between reset periods>
@@ -32,7 +34,7 @@ RESET_PERIOD_SECOND = <number of seconds between reset periods>
 
 This script periodically checks Sleeper APIs for recent league activity and direct messages from users following the bot. The interval of the periodic checks is determined by the RESET_PERIOD_HOUR, RESET_PERIOD_MINUTE, and RESET_PERIOD_SECOND environment variables specified in the .env file.
 
-Before the script can report on your league, you must first configure the script by specifying your league's LEAGUE_ID in the .env file. Additionally, you must follow the bot before the previous reset period and then DM the bot with the format "RUMOR <rumor>" to give the bot access to recent rumors in your league.
+Before the script can report on your league, you must first configure the script by specifying your league's LEAGUE_ID in the .env file. Additionally, you must follow the bot before the previous reset period and then DM the bot with the format "RUMOR \<rumor\>" to give the bot access to recent rumors in your league.
 
 When the script is executed, it will report any recent transactions, or other league activity to a Twitter account associated with the API keys specified in the .env file. The script also periodically tweets rumors collected from the DMs received in the format mentioned above.
 
